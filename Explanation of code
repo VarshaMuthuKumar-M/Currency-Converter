@@ -1,0 +1,74 @@
+def currency_converter():
+This line defines a function named currency_converter.
+All code inside this function will run when the function is called.
+
+print("\n------ CURRENCY CONVERTER ------")
+Prints a heading for the program.
+\n creates a new line before the heading.
+
+print("1. INR to USD")
+print("2. INR to EUR")
+print("3. INR to GBP")
+print("4. INR to JPY")
+print("5. Exit")
+Displays the menu options to the user.
+User can choose which currency to convert or exit the program.
+
+choice = int(input("Enter your choice: "))
+Takes the user’s choice as input.
+input() reads data as text.
+int() converts it into an integer.
+Stores the value in the variable choice.
+
+if choice >= 1 and choice <= 4:
+    amount = float(input("Enter amount in INR: "))
+Checks if the choice is between 1 and 4.
+If true, asks the user to enter the amount in INR.
+float() allows decimal values.
+Stores the amount in the variable amount.
+
+if choice == 1:
+    usd = amount * 0.012
+    print("Converted Amount in USD:", usd)
+If the user selects option 1:
+Converts INR to USD using a fixed rate.
+Displays the converted amount.
+
+elif choice == 2:
+    eur = amount * 0.011
+    print("Converted Amount in EUR:", eur)
+Executes when the user chooses option 2.
+Converts INR to EUR.
+Prints the result.
+
+elif choice == 3:
+    gbp = amount * 0.009
+    print("Converted Amount in GBP:", gbp)
+Executes when option 3 is selected.
+Converts INR to GBP.
+Displays the converted value.
+
+elif choice == 4:
+    jpy = amount * 1.67
+    print("Converted Amount in JPY:", jpy)
+Executes when option 4 is selected.
+Converts INR to JPY.
+Prints the converted amount.
+
+elif choice == 5:
+    print("Thank you for using Currency Converter")
+    exit()
+Executes when the user selects Exit.
+Displays a thank-you message.
+exit() stops the program completely.
+
+else:
+    print("Invalid choice")
+Runs when the user enters an invalid option.
+Displays an error message.
+
+while True:
+    currency_converter()
+Creates an infinite loop.
+Calls the currency_converter() function again and again.
+Keeps the program running until the user chooses Exit.
