@@ -1,0 +1,38 @@
+def currency_converter():
+    print("\n------ CURRENCY CONVERTER ------")
+    print("1. INR to USD")
+    print("2. INR to EUR")
+    print("3. INR to GBP")
+    print("4. INR to JPY")
+    print("5. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice >= 1 and choice <= 4:
+        amount = float(input("Enter amount in INR: "))
+
+    if choice == 1:
+        usd = amount * 0.012
+        print("Converted Amount in USD:", usd)
+
+    elif choice == 2:
+        eur = amount * 0.011
+        print("Converted Amount in EUR:", eur)
+
+    elif choice == 3:
+        gbp = amount * 0.009
+        print("Converted Amount in GBP:", gbp)
+
+    elif choice == 4:
+        jpy = amount * 1.67
+        print("Converted Amount in JPY:", jpy)
+
+    elif choice == 5:
+        print("Thank you for using Currency Converter")
+        exit()
+
+    else:
+        print("Invalid choice")
+
+while True:
+    currency_converter()# its optional
